@@ -24,7 +24,7 @@ h1
 body{
     text-align: center;
     
-    background-image: url("http://www.hv-designs.co.uk/files/includes/images/tutorials-webdesign_layout9-wood.jpg"); 
+    background-image: url("../img/BackG.jpg"); 
     background-position: center;
 }
 
@@ -36,7 +36,7 @@ pre {
     font-family: system-ui;
     display: none;
     color: white; 
-    background-image: url("http://www.hv-designs.co.uk/files/includes/images/tutorials-webdesign_layout9-wood.jpg");
+    background-image: url("../img/BackG.jpg");
 }
 
 
