@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 	$.ajax({
 		url : " [URL_DE_VOTRE_WEB_SERVICE] ",
@@ -16,4 +17,4 @@ $(document).ready(function() {
 		}
 	});
 });
-			
+	
