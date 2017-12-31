@@ -27,6 +27,65 @@ body{
     background-image: url("../img/BackG.jpg"); 
     background-position: center;
 }
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 4px 10px;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 15px;
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+  background-color: #ccc;
+  background-clip: padding-box;
+  border: 1px solid;
+  border-color: #202020 #1a1a1a #111;
+  border-radius: 2px;
+  background-image: -webkit-linear-gradient(top, #efefef, #777);
+  background-image: -moz-linear-gradient(top, #efefef, #777);
+  background-image: -o-linear-gradient(top, #efefef, #777);
+  background-image: linear-gradient(to bottom, #efefef, #777);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.09), 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.09), 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button:hover {
+  background-color: #aaaaaa;
+  background-image: -webkit-linear-gradient(top, #ccc, #555);
+  background-image: -moz-linear-gradient(top, #ccc, #555);
+  background-image: -o-linear-gradient(top, #ccc, #555);
+  background-image: linear-gradient(to bottom, #ccc, #555);
+}
+.button:active, .button.active {
+  background-color: #b42f32;
+  border-color: #1c1c1c #202020 #222;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.09);
+}
+
+.rounded {border-radius:100em!important;}
+
+
+
+.lightGrey {
+  color: #bbb;
+  text-shadow: 0 0 2px rgba(0, 0, 0, .7);
+  background-color: #303030;
+  border-color: #1c1c1c #202020 #222;
+  background-image: -webkit-linear-gradient(top, #8e8e8e, #434343);
+  background-image: -moz-linear-gradient(top, #8e8e8e, #434343);
+  background-image: -o-linear-gradient(top, #8e8e8e, #434343);
+  background-image: linear-gradient(to bottom, #8e8e8e, #434343);
+}
+.lightGrey:hover {
+  background-color: #313131;
+  background-image: -webkit-linear-gradient(top, #7b7b7b, #2a2a2a);
+  background-image: -moz-linear-gradient(top, #7b7b7b, #2a2a2a);
+  background-image: -o-linear-gradient(top, #7b7b7b, #2a2a2a);
+  background-image: linear-gradient(to bottom, #7b7b7b, #2a2a2a);
+}
+
 
 
 
@@ -34,80 +93,12 @@ body{
     
 pre {
     font-family: system-ui;
-    display: none;
     color: white; 
     background-image: url("../img/BackG.jpg");
 }
 
 
 
-
-
-
-.index-content a:hover{
-    color:black;
-    text-decoration:none;
-}
-.index-content{
-    margin-bottom:20px;
-    padding:50px 0px;
-    margin-right: auto;
-    margin-left: auto;
-    
-}
-
-
-/*.index-content .row{
-    margin-top:20px;
-}*/
-.index-content a{
-    color: black;
-}
-.index-content .card{
-    background-color: gray;
-   height: 50%;
-   width: 50%;
-    padding:0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius:4px;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
-    
-
-}
-.index-content .card:hover{
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}
-.index-content .card img{
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-}
-.index-content .card h4{
-    margin:20px;
-}
-.index-content .card p{
-    margin:20px;
-    opacity: 0.65;
-}
-
-.stylish-input-group .input-group-addon{
-    background: white !important;
-}
-.stylish-input-group .form-control{
-    border-right:0; 
-    box-shadow:0 0 0; 
-    border-color:#ccc;
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
-}
-
-#boutonRecherche{
-    background:#212F3D;
-    border: 1px solid #ccc;
-}
 
 
 *[role="form"] {
@@ -120,6 +111,5 @@ pre {
 
 
 
-form-control {
-    border:0px;
-}
+
+
