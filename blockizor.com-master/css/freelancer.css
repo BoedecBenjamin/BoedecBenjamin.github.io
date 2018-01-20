@@ -6,6 +6,8 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  background-image: url("../img/BackG.jpg"); 
+  background-position: center;
 }
 p {
   font-size: 20px;
@@ -68,7 +70,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #18BC9C;
+  background: #1875bc;
   color: white;
 }
 header .container {
