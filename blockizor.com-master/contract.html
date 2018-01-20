@@ -11,10 +11,11 @@
 
     <!-- Theme CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
+    
 
     <!-- Nottario CSS -->
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link rel="stylesheet" href="../style/style.css" >
+
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -27,17 +28,23 @@
     <![endif]-->
 </head>
 <body id="page-top" class="index">
-      <nav class="navbar navbar-default">
+  <div id ="app">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+      
       <div class="container-fluid">
         <ul class="nav navbar-nav">
           <li><a  href="../index.html">Home</a></li>
           <li><a href="../bitcoin/index.html">Bitcoin explorer</a></li>
-          <li><a href="../token.html">Token ERC#20</a></li>
-          <li><a href="index.html">PoE Copy Validation</a></li>
+          <li><a href="../CV.html">My resume</a></li>
+          <li><a href="index.html">Blockizor</a></li>
         </ul>
       </div>
-    </nav>
-  <div id ="app">
+   
+  </nav>
+  </br></br></br>
+
+
     <!-- Header -->
     <header>
         <div class="container" id="maincontent" tabindex="-1">
@@ -62,17 +69,17 @@
              </div>
              <div v-if="!web3Missing">
                <table  class="table">
-                 <tr><th>Name</th><td>{{ name }}<span v-if="name.length==32">...</span></td></tr>
-                 <tr><th>Type</th><td>{{ type }}<span v-if="name.length==32">...</span></td></tr>
-                 <tr><th>Size</th><td>{{ size }} bytes</td></tr>
-                 <tr><th>Last modified</th><td>{{ lastModified }}</td></tr>
+                 <tr><th>Nom</th><td>{{ name }}<span v-if="name.length==32">...</span></td></tr>
+                 <tr><th>Type de fichier</th><td>{{ type }}<span v-if="name.length==32">...</span></td></tr>
+                 <tr><th>Taille</th><td>{{ size }} bytes</td></tr>
+                 <tr><th>Dernière modification</th><td>{{ lastModified }}</td></tr>
                  <tr><th>Hash</th><td>{{ hash }}</td></tr>
-                 <tr><th>Registered in the blockchain on </th><td>{{ timestamp }}</td></tr>
+                 <tr><th>Enregistré dans la blockchain le </th><td>{{ timestamp }}</td></tr>
                </table>
-               <h2>To verify the authenticity of your file, drag and drop it in the box below</h2>
+               <h2>Pour vérifier l'authenticité de votre fichier, glissez le dans la zone ci-dessous</h2>
                <hr class="star-light">
                <div id="drop_zone" v-bind:class="{ dragging: dragging }" ondrop="verify_file(event);" ondragover="allowDrop(event)" ondragleave="dragout(event)">
-                 <strong>Disposal area ...</strong>
+                 <strong>Zone de dépôt ...</strong>
                </div>
 
                <div v-if="verified && droppedHash">VERIFIED</div>
