@@ -35,7 +35,7 @@
       
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li><a  href="../index.html">Home</a></li>
+          <li><a  href="../index.html">Homepage</a></li>
           <li><a href="../bitcoin/index.html">Bitcoin explorer</a></li>
           <li><a href="../CV.html">My resume</a></li>
           <li><a href="index.html">Blockizor</a></li>
@@ -52,10 +52,10 @@
                   <div class="intro-text">
                       <h1 class="name">Blockizor</h1>
                       <hr class="star-light">
-                      <span class="skills">Connectez vous à MetaMask</span>
+                      <span class="skills">Connect to <a href="https://metamask.io">Metamask </a></span>
                   </div>
                   <div>
-                    <button type="button" class="btn btn-primary btn-lg buttonspace" v-on:click="display_upload">Enregistrer un texte !</button>
+                    <button type="button" class="btn btn-primary btn-lg buttonspace" v-on:click="display_upload">Save a text !</button>
                   </div>
               </div>
           </div>
@@ -68,7 +68,7 @@
          <div class="col-lg-12 text-center">
            <div v-if="web3Missing">
              <p>
-                Merci d'installer l'extension <a href="https://metamask.io/" target="_blank">Metamask</a> pour Google Chrome ou Firefox pour utiliser Blockizor
+                Please, install <a href="https://metamask.io/" target="_blank">Metamask</a> on Google Chrome or Firefox to use Blockizor
              </p>
            </div>
            <div v-if="!web3Missing">
@@ -80,27 +80,27 @@
                <strong>Drop Zone ...</strong>
              </div>
              <div v-if="hash"> 
-               <h2>Détails du fichier</h2>
+               <h2>File Details</h2>
                <hr class="star-light">
                <table class="table">
-                 <tr><th>Nom</th><td>{{ name }}<span v-if="name.length==32">...</span></td></tr>
-                 <tr><th>Type de fichier</th><td>{{ type }}<span v-if="name.length==32">...</span></td></tr>
-                 <tr><th>Taille</th><td>{{ size }} bytes</td></tr>
-                 <tr><th>Dernière modification</th><td>{{ lastModified }}</td></tr>
+                 <tr><th>Name</th><td>{{ name }}<span v-if="name.length==32">...</span></td></tr>
+                 <tr><th>Type of file</th><td>{{ type }}<span v-if="name.length==32">...</span></td></tr>
+                 <tr><th>Size</th><td>{{ size }} bytes</td></tr>
+                 <tr><th>Last changing</th><td>{{ lastModified }}</td></tr>
                  <tr><th>Hash</th><td>{{ hash }}</td></tr>
                </table>
              </div>
              <div class="buttonspace" v-if="!animate">
-               <button type="button" class="btn btn-primary btn-lg" :disabled="!hash || !name || hash.length!=66" v-on:click="create_contract">Enregistrer</button>
-               <button type="button" class="btn btn-danger btn-lg"  v-on:click="cancel_upload">Annuler</button>
+               <button type="button" class="btn btn-primary btn-lg" :disabled="!hash || !name || hash.length!=66" v-on:click="create_contract">Save</button>
+               <button type="button" class="btn btn-danger btn-lg"  v-on:click="cancel_upload">Cancel</button>
              </div>
            </div>
            <div v-if="animate">
              <p v-if="!error"><img src="img/animation.gif" /></p>
-             <p v-if="!error"> Merci d'attendre que le contrat soit stocké dans la blockchain Ethereum. 
-               Cela peut prendre jusqu'à une minute. Lorsque cela sera fait, vous serez redigié vers la page de confirmation.</p> 
-             <p><a v-bind:href="etherscanLink" target="_new">Transaction Blockchain : {{ tx }}</a></p>
-             <p v-if="error">Une erreur est survenue. L'erreur est : "{{ error }}".</p>
+             <p v-if="!error"> Please wait for the contract to be stocked in the Ethereum blockchain.  
+               This may take a few minutes. When the contract is done, you will be automatically directed to a confirmation page. </p> 
+             <p><a v-bind:href="etherscanLink" target="_new"> Blockchain Transaction : {{ tx }}</a></p>
+             <p v-if="error">An error occured. The error is : "{{ error }}".</p>
            </div>
          </div>
        </div>
