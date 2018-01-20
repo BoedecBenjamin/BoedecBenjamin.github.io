@@ -119,7 +119,3 @@ function verify_file(ev) {
   };
   reader.readAsText(f);
 }
-
-
-
-
